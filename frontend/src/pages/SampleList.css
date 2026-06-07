@@ -1,0 +1,160 @@
+.sample-list {
+  width: 100%;
+}
+
+.controls {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.search-input, .filter-select {
+  padding: 10px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+  flex: 1;
+  min-width: 200px;
+}
+
+.search-input:focus, .filter-select:focus {
+  outline: none;
+  border-color: #0066cc;
+  box-shadow: 0 0 4px rgba(0, 102, 204, 0.2);
+}
+
+.samples-container {
+  background-color: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  overflow-x: auto;
+}
+
+.samples-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.samples-table thead {
+  background-color: #f8f9fa;
+}
+
+.samples-table th {
+  padding: 12px;
+  text-align: left;
+  font-weight: 600;
+  color: #333;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+.samples-table td {
+  padding: 12px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.samples-table tbody tr:hover {
+  background-color: #f8f9fa;
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.status-active {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.status-inactive {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.status-in-review {
+  background-color: #fff3cd;
+  color: #856404;
+}
+
+.status-archived {
+  background-color: #e2e3e5;
+  color: #383d41;
+}
+
+.action-btn {
+  margin-right: 8px;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  font-size: 12px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.action-btn.view {
+  background-color: #0066cc;
+  color: white;
+}
+
+.action-btn.view:hover {
+  background-color: #0052a3;
+}
+
+.action-btn.edit {
+  background-color: #28a745;
+  color: white;
+}
+
+.action-btn.edit:hover {
+  background-color: #218838;
+}
+
+.action-btn.delete {
+  background-color: #dc3545;
+  color: white;
+}
+
+.action-btn.delete:hover {
+  background-color: #c82333;
+}
+
+.no-data {
+  text-align: center;
+  color: #666;
+  padding: 40px 20px;
+}
+
+@media (max-width: 768px) {
+  .controls {
+    flex-direction: column;
+  }
+
+  .search-input, .filter-select {
+    width: 100%;
+  }
+
+  .samples-table {
+    font-size: 12px;
+  }
+
+  .samples-table th, .samples-table td {
+    padding: 8px;
+  }
+
+  .action-btn {
+    display: block;
+    margin-right: 0;
+    margin-bottom: 4px;
+    width: 100%;
+  }
+}
